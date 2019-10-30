@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:simple_app_example/ui/camera_page.dart';
+import 'package:simple_app_example/ui/tasks_page.dart';
 
 import './models/global.dart';
 
@@ -61,14 +63,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: darkGreyColor,
                 child: TabBarView(
                   children: <Widget>[
-                    Icon(Icons.account_circle),
-                    Icon(Icons.add_a_photo)
+                    TasksPage(),
+                    CameraPage()
                   ],
                 ),
               ),
               Container(
                 height: 120,
-                padding: EdgeInsets.only(left: 50),
+                padding: EdgeInsets.only(left: 45,bottom: 15),
                 decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.only(
