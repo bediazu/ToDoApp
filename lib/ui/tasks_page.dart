@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../models/global.dart';
 
+import '../models/widgets/task_widget.dart';
+
 class TasksPage extends StatefulWidget {
   @override
   _TasksPageState createState() => _TasksPageState();
@@ -20,38 +22,13 @@ class _TasksPageState extends State<TasksPage> {
     );
   }
 
-  List<Widget> getList() {
+  List<TaskWidget> getList() {
     return [
-      Container(
-        height: 150,
-        color: Colors.cyan,
-        padding: EdgeInsets.only(left: 50, right: 50),
-      ),
-      Container(
-        height: 150,
-        color: Colors.orange,
-        padding: EdgeInsets.only(left: 50, right: 50),
-      ),
-      Container(
-        height: 150,
-        color: Colors.yellow,
-        padding: EdgeInsets.only(left: 50, right: 50),
-      ),
-      Container(
-        height: 150,
-        color: Colors.red,
-        padding: EdgeInsets.only(left: 50, right: 50),
-      ),
-      Container(
-        height: 150,
-        color: Colors.indigo,
-        padding: EdgeInsets.only(left: 50, right: 50),
-      ),
-      Container(
-        height: 150,
-        color: Colors.pink,
-        padding: EdgeInsets.only(left: 50, right: 50),
-      ),
+      TaskWidget(taskColor: Colors.blue, title: 'Title 1',),
+      TaskWidget(taskColor: Colors.brown, title: 'Title 2',),
+      TaskWidget(taskColor:Colors.grey, title: 'Title 3',),
+      TaskWidget(taskColor:Colors.pink, title: 'Title 4',),
+      TaskWidget(taskColor:Colors.orange, title: 'Title 5',)
     ];
   }
 }
